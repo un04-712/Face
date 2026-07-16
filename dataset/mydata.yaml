@@ -1,0 +1,5 @@
+train: D:\Desktop\face_ai\dataset\images\train
+val: D:\Desktop\face_ai\dataset\images\valid
+
+names:
+  0: face
