@@ -27,64 +27,83 @@ class Ui_Form(object):
                 font-family: 'Microsoft YaHei', 'PingFang SC', 'Segoe UI', sans-serif;
                 font-size: 12px;
                 color: #1f2937;
-                background-color: #f5f7fb;
+                background-color: #f3f6fb;
             }
             QGroupBox {
                 background: #ffffff;
-                border: 1px solid #e5e7eb;
-                border-radius: 14px;
-                margin-top: 14px;
-                padding: 12px;
+                border: 1px solid #e6ebf2;
+                border-radius: 16px;
+                margin-top: 16px;
+                padding: 14px;
             }
             QGroupBox::title {
                 subcontrol-origin: margin;
                 subcontrol-position: top left;
-                padding: 0 8px;
-                margin-left: 10px;
-                color: #111827;
+                padding: 0 10px;
+                margin-left: 12px;
+                color: #0f172a;
                 font-weight: 600;
             }
             QLabel {
                 background: transparent;
             }
             QLabel#label {
-                font-size: 24px;
-                font-weight: 700;
+                font-size: 26px;
+                font-weight: 800;
                 color: #0f172a;
-                padding: 6px 0 14px 0;
+                padding: 8px 0 14px 0;
+                letter-spacing: 1px;
             }
             QLabel#label_2, QLabel#label_3, QLabel#label_9 {
-                border: 1px dashed #cbd5e1;
-                border-radius: 12px;
+                border: 1.5px dashed #cbd5e1;
+                border-radius: 14px;
                 background: #f8fafc;
                 color: #64748b;
                 min-height: 220px;
             }
             QPushButton {
                 border: none;
-                border-radius: 10px;
-                padding: 8px 14px;
-                background: #2563eb;
+                border-radius: 12px;
+                padding: 9px 14px;
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #3b82f6, stop:1 #2563eb);
                 color: white;
                 font-weight: 600;
             }
             QPushButton:hover {
-                background: #1d4ed8;
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #4f8ef7, stop:1 #1d4ed8);
             }
             QPushButton:pressed {
                 background: #1e40af;
             }
+            QPushButton#pushButton_14, QPushButton#pushButton_15, QPushButton#pushButton_16, QPushButton#pushButton_17 {
+                text-align: left;
+                padding-left: 18px;
+                background: #ffffff;
+                color: #334155;
+                border: 1px solid #d9e2ec;
+                border-left: 5px solid transparent;
+            }
+            QPushButton#pushButton_14:hover, QPushButton#pushButton_15:hover, QPushButton#pushButton_16:hover, QPushButton#pushButton_17:hover {
+                border-left-color: #3b82f6;
+                background: #eff6ff;
+                color: #1d4ed8;
+            }
+            QPushButton#pushButton_14:checked, QPushButton#pushButton_15:checked, QPushButton#pushButton_16:checked, QPushButton#pushButton_17:checked {
+                border-left-color: #2563eb;
+                background: #dbeafe;
+                color: #1d4ed8;
+            }
             QLineEdit, QTextBrowser, QTableWidget {
                 border: 1px solid #dbe3ee;
-                border-radius: 10px;
+                border-radius: 12px;
                 background: #ffffff;
                 selection-background-color: #93c5fd;
             }
             QLineEdit {
-                padding: 8px 10px;
+                padding: 8px 12px;
             }
             QTextBrowser {
-                padding: 10px;
+                padding: 12px;
             }
             QRadioButton {
                 spacing: 8px;
@@ -94,11 +113,9 @@ class Ui_Form(object):
                 width: 16px;
                 height: 16px;
             }
-            QTabWidget::pane {
-                border: 0;
-            }
             QTableWidget {
                 gridline-color: #e5e7eb;
+                alternate-background-color: #f8fafc;
             }
             QHeaderView::section {
                 background: #eff6ff;
@@ -124,6 +141,7 @@ class Ui_Form(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.groupBox_5 = QtWidgets.QGroupBox(Form)
+        self.groupBox_5.setMinimumWidth(220)
         self.groupBox_5.setObjectName("groupBox_5")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox_5)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -132,21 +150,25 @@ class Ui_Form(object):
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.pushButton_14 = QtWidgets.QPushButton(self.groupBox_5)
         self.pushButton_14.setMinimumSize(QtCore.QSize(0, 42))
+        self.pushButton_14.setCheckable(True)
         self.pushButton_14.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_14.setObjectName("pushButton_14")
         self.verticalLayout_11.addWidget(self.pushButton_14)
         self.pushButton_15 = QtWidgets.QPushButton(self.groupBox_5)
         self.pushButton_15.setMinimumSize(QtCore.QSize(0, 42))
+        self.pushButton_15.setCheckable(True)
         self.pushButton_15.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_15.setObjectName("pushButton_15")
         self.verticalLayout_11.addWidget(self.pushButton_15)
         self.pushButton_16 = QtWidgets.QPushButton(self.groupBox_5)
         self.pushButton_16.setMinimumSize(QtCore.QSize(0, 42))
+        self.pushButton_16.setCheckable(True)
         self.pushButton_16.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_16.setObjectName("pushButton_16")
         self.verticalLayout_11.addWidget(self.pushButton_16)
         self.pushButton_17 = QtWidgets.QPushButton(self.groupBox_5)
         self.pushButton_17.setMinimumSize(QtCore.QSize(0, 42))
+        self.pushButton_17.setCheckable(True)
         self.pushButton_17.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_17.setObjectName("pushButton_17")
         self.verticalLayout_11.addWidget(self.pushButton_17)
@@ -168,6 +190,7 @@ class Ui_Form(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_2 = QtWidgets.QLabel(self.groupBox_6)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.verticalLayout_3.addWidget(self.label_2)
         self.groupBox = QtWidgets.QGroupBox(self.groupBox_6)
@@ -234,6 +257,7 @@ class Ui_Form(object):
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.label_3 = QtWidgets.QLabel(self.groupBox_4)
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
         self.verticalLayout_9.addWidget(self.label_3)
         self.verticalLayout_8 = QtWidgets.QVBoxLayout()
@@ -313,6 +337,7 @@ class Ui_Form(object):
         self.verticalLayout_20.setObjectName("verticalLayout_20")
         self.label_9 = QtWidgets.QLabel(self.groupBox_8)
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_9.setScaledContents(True)
         self.label_9.setObjectName("label_9")
         self.verticalLayout_20.addWidget(self.label_9)
         self.groupBox_11 = QtWidgets.QGroupBox(self.groupBox_8)
@@ -425,12 +450,13 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(0)
+        self.pushButton_14.setChecked(True)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "人脸识别系统"))
+        Form.setWindowTitle(_translate("Form", "Face AI - 人脸识别系统"))
+        self.label.setText(_translate("Form", "Face AI 人脸识别系统"))
         self.groupBox_5.setTitle(_translate("Form", "功能选项"))
         self.pushButton_14.setText(_translate("Form", "人脸信息录入"))
         self.pushButton_15.setText(_translate("Form", "人脸识别"))
